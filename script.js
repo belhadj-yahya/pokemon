@@ -69,7 +69,38 @@ if (document.querySelector(".types")) {
         return respo.json()
     })
     .then(data => {
+      let card = document.querySelector(".count")
         console.log(data)
+        let card_info1 = `
+         <p>${data.name} id${data.id}</p>
+         <img src="${data.sprites.front_default}" alt="">
+         <p>Height: ${data.height}</p>
+         <div class="sids">
+            <div class="left">
+            <p>Weight: ${data.weight}</p>
+         <p>Base Experience: ${data.base_experience}</p>
+         <p>Types: ${data.abilities[0].ability.name}</p>
+         <p>Types: ${data.abilities[1].ability.name}</p>
+         <p>Types: ${data.abilities[2].ability.name}</p>     
+            </div>
+            <div class="right">
+             <p>Stats:</p>
+            
+              <p>HP: ${data.stats[0].base_stat}</p>
+              <p>Attack: ${data.stats[1].base_stat}</p>
+              <p>Defense: ${data.stats[2].base_stat}</p>
+              <p>Special Attack: ${data.stats[3].base_stat}</p>
+              <p>Special Defense: ${data.stats[4].base_stat}</p>
+              <p>Speed: ${data.stats[5].base_stat}</p>
+            </div>
+        </div>
+            
+        `     
+              card.innerHTML = card_info1;
+              
+
+
+
     })
   }
 

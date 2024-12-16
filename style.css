@@ -3,33 +3,161 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
 }
 *{
     margin: 0%;
     padding: 0%;
 }
-.types{
-    width: 100%;
-    height: 100vh;
-    background-color: red;
+ /*types style*/
+.types {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.type{
-    width: 200px;
-    height: 100px;
-    background-color: black;
-    color: white;
-    border-radius: 20px;
-    display: flex;
+    padding: 1rem;
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Type styles */
+  .type {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: capitalize; 
+    color: #fff; 
+    background: linear-gradient(135deg, #ff7eb3, #ff758c); 
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .type:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .type:active {
+    transform: scale(0.95); 
+  }
+/*names style*/
+.count{
+    width: 40%;
+    height: 60vh;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
 }
-.type:hover{
-    background-color: rgb(34, 31, 31);
-    width: 210px;
-}
+.count {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .type-details {
+    max-width: 430px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .type-details p {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .type-details p:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .type-details p:active {
+    background-color: #003d80;
+    transform: scale(0.95);
+  }
+  
+  .type-details p:first-letter {
+    text-transform: uppercase;
+  }
+  
+  .type-details p.no-pokemon {
+    color: #333;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: default;
+  }
+  
+  .type-details p.no-pokemon:hover {
+    background-color: transparent;
+    transform: none;
+  }
+  
+  
+  /*card style*/
+  .count img {
+    max-width: 150px;
+    margin: 10px 0;
+    background-color: beige;
+    border: 1px solid black;
+  }
+  
+  .count p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .sids {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .sids .left,
+  .sids .right {
+    width: 48%;
+    text-align: left;
+  }
+  
+  .sids .left p,
+  .sids .right p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .sids .left {
+    border-right: 2px solid #ddd;
+    padding-right: 10px;
+  }
+  
+  .sids .right {
+    padding-left: 10px;
+  }
+  
+  .count .right p:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
