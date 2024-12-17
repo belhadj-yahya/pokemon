@@ -22,7 +22,7 @@ body{
   }
   
   /* Type styles */
-  .type {
+  .searchAll , .type {
     display: inline-block;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -34,7 +34,9 @@ body{
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
   }
-
+.searchAll{
+  margin-top: 5vh;
+}
   .type:hover {
     transform: scale(1.1); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -42,10 +44,11 @@ body{
   .type:active {
     transform: scale(0.95); 
   }
+ 
 /*names style*/
 .count{
-    width: 40%;
-    height: 60vh;
+    width: 28%;
+    height: 76vh;
     background-color: yellow;
     display: flex;
     flex-direction: column;
@@ -113,14 +116,29 @@ body{
     background-color: transparent;
     transform: none;
   }
-  
-  
+  .pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .pages div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    height: 3vh;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  .search{
+    margin-top: 2vh;
+  }
   /*card style*/
   .count img {
     max-width: 150px;
-    margin: 10px 0;
-    background-color: beige;
-    border: 1px solid black;
+    margin: 10px 0 0px 105px;
   }
   
   .count p {
@@ -160,4 +178,5 @@ body{
     font-weight: bold;
     text-decoration: underline;
   }
-  
+
+
